@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #eef0ff, #f8f5ff, #eaf5ff);
+    font-family: 'DM Sans', sans-serif;
+    color: #252747;
+    overflow-x: hidden;
+}
+
+/* Main Heading */
+
+.container {
+    max-width: 1150px;
+}
+
+h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    background: linear-gradient(90deg, #5555db, #a15ee8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 12px;
+}
+
+.text-center > p {
+    color: #777b98;
+    font-size: 1.05rem;
+}
+
+/* Form and Preview Containers */
+
+.form-container,
+.preview-container {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 35px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 15px 45px rgba(78, 78, 150, 0.09);
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container:hover,
+.preview-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px rgba(78, 78, 150, 0.14);
+}
+
+.form-container h3,
+.preview-container h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #30345c;
+    margin-bottom: 28px;
+}
+
+/* Form Labels */
+
+.form-label {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #484c70;
+    margin-bottom: 9px;
+}
+
+/* Input Fields */
+
+.form-control {
+    padding: 14px 16px;
+    border: 1.5px solid #e5e6f3;
+    border-radius: 12px;
+    background: #fafaff;
+    font-size: 0.95rem;
+    color: #30345c;
+    transition: all 0.25s ease;
+}
+
+.form-control::placeholder {
+    color: #a5a7bb;
+}
+
+.form-control:focus {
+    background: white;
+    border-color: #7770e8;
+    box-shadow: 0 0 0 4px rgba(119, 112, 232, 0.12);
+}
+
+/* Generate Button */
+
+.btn-primary {
+    background: linear-gradient(110deg, #5956db, #9462e8);
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    box-shadow: 0 7px 18px rgba(105, 91, 220, 0.25);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(110deg, #4844c5, #8050d2);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(105, 91, 220, 0.3);
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+/* Profile Card */
+
+.profile-card {
+    position: relative;
+    background: linear-gradient(145deg, #ffffff, #f5f4ff);
+    border: 1px solid #e9e6ff;
+    border-radius: 22px;
+    padding: 35px 25px;
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow-wrap: anywhere;
+    transition: all 0.35s ease;
+}
+
+.profile-card:hover {
+    transform: scale(1.015);
+    box-shadow: 0 15px 35px rgba(91, 83, 180, 0.12);
+}
+
+/* Profile Image */
+
+.profile-card img {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    outline: 3px solid #8176e8;
+    box-shadow: 0 8px 25px rgba(89, 86, 219, 0.2);
+    margin-bottom: 23px;
+    transition: transform 0.35s ease;
+}
+
+.profile-card img:hover {
+    transform: scale(1.07);
+}
+
+/* Profile Name */
+
+.profile-card h4 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.55rem;
+    font-weight: 800;
+    color: #30345c;
+    margin-bottom: 10px;
+}
+
+/* Profile Bio */
+
+.profile-card p {
+    color: #777b98;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    max-width: 330px;
+    margin-bottom: 0;
+}
+
+/* Empty State */
+
+.placeholder {
+    color: #9698b0;
+}
+
+.placeholder h5 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #7770c9;
+    margin-bottom: 10px;
+}
+
+.placeholder p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Success and Error Messages */
+
+#message {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 2.1rem;
+    }
+
+    .form-container,
+    .preview-container {
+        padding: 25px 20px;
+        border-radius: 18px;
+    }
+
+    .profile-card {
+        min-height: 300px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .text-center > p {
+        font-size: 0.9rem;
+    }
+
+}
